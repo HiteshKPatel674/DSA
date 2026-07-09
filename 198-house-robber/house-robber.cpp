@@ -18,6 +18,7 @@ public:
         // ans=solve(nums,0);
         // return ans;
         int n=nums.size();
+        if(n == 1) return nums[0];
         vector<int>dp(n,-1);
         return solve(nums,0,dp);       
     }
