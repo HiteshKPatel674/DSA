@@ -29,8 +29,8 @@ public:
 
         long long ans=0;
         arrLen = min(arrLen, steps + 1);
-        
-
+        //If steps=5... then maximum we can go from index 0 is till index 0->1..1->2..2->3..3->4..4->5..5->6
+        //That is till index 6..therefore arrLen is prune to steps+1.
         vector<vector<long long>>dp(steps+1,vector<long long>(arrLen,-1));
         return solve(steps,0,arrLen,dp);
 
