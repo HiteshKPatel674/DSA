@@ -6,14 +6,12 @@ public:
         int m = nums2.size();
 
         int total = n + m;
-
-        int target1 = (total - 1) / 2;
-        int target2 = total / 2;
-
-        int i = 0, j = 0;
-        int index = 0;
+        int target = total / 2;
 
         int prev = 0, curr = 0;
+        int counter = 0;
+
+        int i = 0, j = 0;
 
         while (i < n || j < m) {
 
@@ -26,13 +24,13 @@ public:
                 curr = nums2[j++];
             }
 
-            if (index == target2)
+            if (counter == target)
                 break;
 
-            index++;
+            counter++;
         }
 
-        if (total % 2 == 1)
+        if (total % 2)
             return curr;
 
         return (prev + curr) / 2.0;
