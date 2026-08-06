@@ -3,7 +3,7 @@ public:
     int smallestNumber(int n, int t) {
 
         int ans;
-        for(int i=0;i<50;i++)
+        for(int i=0;i<10;i++)
         {
             int product=1;
             int number=n+i;
